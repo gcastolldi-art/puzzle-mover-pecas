@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mover peças • Gincana</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <main>
+        <section id="menu">
+            <header class="hero"><span class="eyebrow">GINCANA · QUEBRA-CABEÇA</span>
+                <h1>Mover <span>peças</span></h1>
+                <p>Uma imagem. Seu próximo desafio.</p>
+                <p class="hint">Escolha uma imagem para começar.</p>
+            </header>
+            <div class="grid-config"><label for="grid-size">Tamanho da grade</label><select id="grid-size"><option value="4">4 × 4 · 15 peças</option><option value="5" selected>5 × 5 · 24 peças</option><option value="6">6 × 6 · 35 peças</option></select></div>
+            <div id="gallery" class="gallery"></div>
+        </section>
+        <section id="game" hidden>
+            <nav class="topbar"><button id="back" class="secondary">← Voltar ao menu</button>
+                <div class="counter"><span>MOVIMENTOS</span><strong id="moves">0</strong></div>
+            </nav>
+            <header class="game-head">
+                <h1 id="title"></h1>
+                <p>Clique ou arraste uma peça vizinha para o espaço vazio.</p>
+            </header>
+            <p id="status" role="status">Embaralhando as peças...</p>
+            <div class="play-layout">
+                <div id="puzzle" role="group" aria-label="Quebra-cabeça 5 por 5"></div>
+                <aside><span class="eyebrow">SUA REFERÊNCIA</span><img id="reference"
+                        alt="Imagem completa para referência">
+                    <p id="piece-count">24 peças + 1 espaço vazio</p><button id="restart" class="primary">Embaralhar novamente</button>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <dialog id="victory">
+        <div class="celebration">✦</div><span class="eyebrow">DESAFIO CONCLUÍDO</span>
+        <h2>Você conseguiu!</h2>
+        <p id="result"></p>
+        <div class="actions"><button id="again" class="primary">Jogar novamente</button><button id="victory-menu"
+                class="secondary">Escolher outra imagem</button><button id="see" class="secondary">Ver montagem</button>
+        </div>
+    </dialog><canvas id="confetti" aria-hidden="true"></canvas>
+    <script src="imagens.js"></script>
+    <script src="modelo.js"></script>
+    <script src="jogo.js"></script>
+</body>
+
+</html>

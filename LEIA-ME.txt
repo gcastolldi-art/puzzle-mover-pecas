@@ -1,0 +1,14 @@
+MOVER PEÇAS
+Abra index.html no navegador. Funciona também offline, sem instalação e sem envio de respostas.
+Para publicar no GitHub Pages ou em outro servidor estático, envie todos os arquivos mantendo a estrutura das pastas.
+
+COMO JOGAR
+Escolha uma imagem no menu. Clique ou arraste uma peça vizinha para o espaço vazio. Apenas movimentos válidos aumentam o contador. Ao concluir, a última peça aparece e a comemoração é exibida.
+Embaralhar novamente inicia uma partida nova com o contador zerado. Voltar ao menu encerra a partida atual.
+
+NOVAS IMAGENS
+Adicione a imagem em assets e uma entrada em imagens.js com id, name, team e image. Use imagens quadradas para evitar distorções.
+
+Grades configuráveis: 4 x 4 (15 peças), 5 x 5 (24 peças) e 6 x 6 (35 peças), sempre com uma casa vazia. Escolha a grade no menu antes de selecionar a imagem. Embaralhamento por movimentos válidos garante uma solução.
+
+Versão 1.2: seleção da grade no menu; informação team removida.
